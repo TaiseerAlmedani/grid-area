@@ -1,0 +1,56 @@
+body{
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace;
+}
+.container{
+  width: 100vw;
+  height: 100vh;
+  /* background-color: steelblue; */
+  display:grid;
+  grid-template-areas: 'fathi fathi fathi' 'nav content sidbar' ' nav footer footer';
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-rows: 80px 1fr 80px;
+}
+.container > *{
+  border: solid 1px skyblue;
+  color: black;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+header{
+  grid-area: fathi;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+ul{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+ul li{
+  list-style-type: none;
+}
+ul li a{
+  color: black;
+  text-decoration: none;
+}
+nav{
+  grid-area: nav;
+}
+main{
+  grid-area: content;
+  background-image: url('samantha-gades-BlIhVfXbi9s-unsplash.jpg');
+  background-size: cover;
+  background-position: center;
+}
+aside{
+grid-area: sidbar;
+}
+footer{
+  grid-area: footer;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 3%;
+}
